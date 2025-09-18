@@ -1,2 +1,2 @@
 # SymMNA
-A Python package to generate a system of equations from a circuit’s netlist using Modified Nodal Analysis (MNA).
+A Python package to generate a system of equations from a circuit’s netlist using Modified Nodal Analysis (MNA). See https://tiburonboy.github.io/Symbolic-Modified-Nodal-Analysis-using-Python/SMNA-function.html for a description of the functions.
