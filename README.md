@@ -2,11 +2,11 @@
 SymMNA is a Python module that will generate a system of equations from a circuit’s netlist using Modified Nodal Analysis (MNA).
 
 ## Overview and Usage
-Consider the schematic of the circuit shown below. This circuit has five branches and three nodes. There is a voltage source $V_1$, which drives the circuit and each of the nodes is labeled along with the ground node.
+Consider the schematic of the circuit shown below. This circuit has nine branches and five nodes. There are four resistors, two independent voltage sources and one independent current source. Additionally there is one VCCS and one CCVS. Each of the nodes is labeled along with the ground node.
 
 ![](SymMNA_readme_example_sch.png)
 
-The circuit was drawn with LTSpice and the netlist can be copied and pasted into the code below.
+The circuit was drawn with LTSpice and the netlist can be copied and pasted into the code snippet below.
 
 ```{python}
 net_list = '''
@@ -38,12 +38,17 @@ for i in range(len(X)):
 
 Markdown(temp)
 ```
+
+The following equations were automatically generated.
+
 $I_{V1} + v_{1} \\cdot \\left(\\frac{1}{R_{2}} + \\frac{1}{R_{1}}\\right) - \\frac{v_{2}}{R_{2}} - \\frac{v_{4}}{R_{1}} = 0$<br>$I_{H1} + v_{2} \\cdot \\left(\\frac{1}{R_{4}} + \\frac{1}{R_{2}}\\right) - \\frac{v_{5}}{R_{4}} - \\frac{v_{1}}{R_{2}} = 0$<br>$- I_{H1} - g_{1} v_{1} + v_{4} \\left(g_{1} - \\frac{1}{R_{3}}\\right) + \\frac{v_{3}}{R_{3}} = 0$<br>$v_{4} \\cdot \\left(\\frac{1}{R_{3}} + \\frac{1}{R_{1}}\\right) - \\frac{v_{3}}{R_{3}} - \\frac{v_{1}}{R_{1}} = - I_{1}$<br>$- I_{V2} - \\frac{v_{2}}{R_{4}} + \\frac{v_{5}}{R_{4}} = 0$<br>$v_{1} = V_{1}$<br>$- v_{5} = V_{2}$<br>$- I_{V2} h_{1} + v_{2} - v_{3} = 0$
+
+From here, the user can use SymPy, NumPy and SciPy to solve the equations and perform additional calculations.
 
 ## Examples and Documentation
 Additional examples and documentation can be found here:
 
-- [Symbolic Modified Nodal Analysis using Python](https://tiburonboy.github.io/Symbolic-Modified-Nodal-Analysis-using-Python/index.html)
+- [Symbolic Modified Nodal Analysis using Python](https://tiburonboy.github.io/Symbolic-Modified-Nodal-Analysis-using-Python/index.html) for an HTML book. 
 - [SymMNA_demo.ipynb](https://github.com/Tiburonboy/SymMNA/blob/main/SymMNA_demo.ipynb) for an quick example.
 
 ## License
@@ -55,3 +60,4 @@ This work (includes python code, documentation, test circuits, etc.) is licensed
 - ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the [same license](https://creativecommons.org/licenses/by-sa/4.0/#ref-same-license) as the original.  
 
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+
