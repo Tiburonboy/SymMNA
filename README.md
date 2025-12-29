@@ -43,13 +43,13 @@ The following equations were automatically generated.
 
 $I_{V1} + v_{1} \\cdot \\left(\\frac{1}{R_{2}} + \\frac{1}{R_{1}}\\right) - \\frac{v_{2}}{R_{2}} - \\frac{v_{4}}{R_{1}} = 0$<br>$I_{H1} + v_{2} \\cdot \\left(\\frac{1}{R_{4}} + \\frac{1}{R_{2}}\\right) - \\frac{v_{5}}{R_{4}} - \\frac{v_{1}}{R_{2}} = 0$<br>$- I_{H1} - g_{1} v_{1} + v_{4} \\left(g_{1} - \\frac{1}{R_{3}}\\right) + \\frac{v_{3}}{R_{3}} = 0$<br>$v_{4} \\cdot \\left(\\frac{1}{R_{3}} + \\frac{1}{R_{1}}\\right) - \\frac{v_{3}}{R_{3}} - \\frac{v_{1}}{R_{1}} = - I_{1}$<br>$- I_{V2} - \\frac{v_{2}}{R_{4}} + \\frac{v_{5}}{R_{4}} = 0$<br>$v_{1} = V_{1}$<br>$- v_{5} = V_{2}$<br>$- I_{V2} h_{1} + v_{2} - v_{3} = 0$
 
-From here, SymPy, NumPy and SciPy to solve the equations and perform additional calculations.
+From here, SymPy, NumPy and SciPy are used to solve the equations and perform additional calculations.
 
 ## Examples and Documentation
 Additional examples and documentation can be found here:
 
 - [Symbolic Modified Nodal Analysis using Python](https://tiburonboy.github.io/Symbolic-Modified-Nodal-Analysis-using-Python/index.html) for an HTML book. 
-- [SymMNA_demo.ipynb](https://github.com/Tiburonboy/SymMNA/blob/main/SymMNA_demo.ipynb) for an quick example.
+- [SymMNA_demo.ipynb](https://github.com/Tiburonboy/SymMNA/blob/main/SymMNA_demo.ipynb) for a JupyterLab example.
 
 ## License
 This work (includes python code, documentation, test circuits, etc.) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).  
