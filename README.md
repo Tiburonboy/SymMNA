@@ -1,12 +1,12 @@
 # SymMNA
-SymMNA is a Python module that will generate a system of equations from a circuit’s netlist using Modified Nodal Analysis (MNA).
+SymMNA is a Python module that will generate a system of equations from a circuit’s netlist using [Modified Nodal Analysis](https://en.wikipedia.org/wiki/Modified_nodal_analysis) (MNA).
 
 ## Overview and Usage
 Consider the schematic of the circuit shown below. This circuit has nine branches and five nodes. There are four resistors, two independent voltage sources and one independent current source. Additionally there is one VCCS and one CCVS. Each of the nodes is labeled along with the ground node.
 
 ![](SymMNA_readme_example_sch.png)
 
-The circuit was drawn with LTSpice and the netlist copied and pasted into the code snippet below.
+The circuit was drawn with LTSpice and the netlist can be copied and pasted into the code snippet below.
 
 ```{python}
 net_list = '''
@@ -48,8 +48,8 @@ From here, SymPy, NumPy and SciPy are used to solve the equations and perform ad
 ## Examples and Documentation
 Additional examples and documentation can be found here:
 
-- [Symbolic Modified Nodal Analysis using Python](https://tiburonboy.github.io/Symbolic-Modified-Nodal-Analysis-using-Python/index.html) an HTML book. 
-- [SymMNA_demo.ipynb](https://github.com/Tiburonboy/SymMNA/blob/main/SymMNA_demo.ipynb) a JupyterLab notebook example.
+- [Symbolic Modified Nodal Analysis using Python](https://tiburonboy.github.io/Symbolic-Modified-Nodal-Analysis-using-Python/index.html) for an HTML book. 
+- [SymMNA_demo.ipynb](https://github.com/Tiburonboy/SymMNA/blob/main/SymMNA_demo.ipynb) for a JupyterLab example.
 
 ## License
 This work (includes python code, documentation, test circuits, etc.) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).  
